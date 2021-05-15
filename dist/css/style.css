@@ -89,9 +89,9 @@ body {
   position: absolute;
   left: 50%;
   top: 100%;
-  width: 2px;
+  width: 3px;
   height: 0px;
-  border-top: 14px solid var(--colour-arrow);
+  border-top: 15px solid var(--colour-arrow);
 }
 
 .colour1 .table__item {
