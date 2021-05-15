@@ -221,8 +221,18 @@ body {
           align-items: center;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1180px) {
   .table__content {
     grid-gap: calc(var(--gutter) / 2);
+  }
+}
+
+@media (min-width: 1020px) {
+  .table__content {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .table__content::-webkit-scrollbar {
+    display: none;
   }
 }

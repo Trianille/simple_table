@@ -131,9 +131,17 @@ body {
     justify-content: center;
     align-items: center;
 }
-
-@media (max-width: 900px) {
+@media (max-width: 1180px) {
     .table__content {
         grid-gap: calc(var(--gutter) / 2);//слегка уменьшили растояние между ячейками, если маленький экран
+    }
+}
+@media (min-width: 1020px) {
+    .table__content {
+        -ms-overflow-style: none;//скрываем скролл на больших экранах
+        scrollbar-width: none;
+        &::-webkit-scrollbar {
+            display: none;
+        }
     }
 }
