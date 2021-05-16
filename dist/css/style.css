@@ -66,10 +66,50 @@ body {
   font-size: calc(12px + 0.35vw);
 }
 
-.table__content::before,
-.table__content::after {
+.table__content h3 {
+  font-size: 25px;
+}
+
+.table__content::before, .table__content::after {
   content: '';
   width: 10px;
+}
+
+.table__item {
+  position: relative;
+  scroll-snap-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 8px;
+  min-width: 230px;
+  max-width: 440px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 115px;
+  margin: 25px 0px;
+  padding: 2px;
+}
+
+.table__item p {
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.table__item p::-webkit-scrollbar {
+  display: none;
 }
 
 .arrow .table__item:not(:last-child)::before {
@@ -156,47 +196,6 @@ body {
   clear: both;
   border-top-color: #6a99d0;
   z-index: -1;
-}
-
-.table__content h3 {
-  font-size: 25px;
-}
-
-.table__item {
-  position: relative;
-  scroll-snap-align: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  border-radius: 8px;
-  min-width: 230px;
-  max-width: 440px;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: 115px;
-  margin: 25px 0px;
-  padding: 2px;
-}
-
-.table__item p {
-  overflow-y: scroll;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-
-.table__item p::-webkit-scrollbar {
-  display: none;
 }
 
 .colour1 .table__item, .colour4 .table__item {
